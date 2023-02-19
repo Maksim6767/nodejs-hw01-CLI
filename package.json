@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-hw01-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksim6767/nodejs-hw01-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maksim6767/nodejs-hw01-CLI/issues"
+  },
+  "homepage": "https://github.com/Maksim6767/nodejs-hw01-CLI#readme",
+  "devDependencies": {
+    "jest": "^29.4.3",
+    "nodemon": "^2.0.20"
+  }
+}
