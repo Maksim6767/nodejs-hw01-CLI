@@ -1,24 +1,24 @@
-const fs = require('fs/promises');
-const path = require('path');
+const fs = require("fs/promises");
+const path = require("path");
 const { randomUUID } = require("crypto");
 
-const contactsPath = path.join(__dirname, "contacts.json");
+const contactsPath = path.join(__dirname, "./db/contacts.json");
 
 async function listContacts() {
     const data = await fs.readFile(contactsPath);
-    const contacts = JSON.parse(data);
-    console.log('List of contacts:');
-    // console.table(contacts);
-};  
+    const contactsData = JSON.parse(data);
+    return contactsData;
+    // console.table(contactsData);
+};
 
 async function getContactById(contactId) {
     const contactsData = await listContacts();
-    const contact = contactsData.find(item => item.id === contactId.toString());
+    const contact = contactsData.find((item) => item.id === contactId.toString());
     if (!contact) {
         return null;
     }
     return contact;
-    // console.log(contact);
+    console.log(contact);
 }
 
 async function removeContact(contactId) {
@@ -45,4 +45,5 @@ module.exports = {
     getContactById,
     removeContact,
     addContact,
-}
+};
+
